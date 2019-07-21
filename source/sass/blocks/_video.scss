@@ -1,0 +1,259 @@
+.video {
+    position: relative;
+    display: block;
+
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 33px;
+    padding-bottom: 40px;
+
+    text-align: center;
+
+    background-color: white;
+
+    &::after {
+        @include pseudo();
+
+        top: 0;
+        left: 0;
+
+        width: 320px;
+        height: 1px;
+
+        background-color: #d6d6d6;
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 648px;
+        padding: 65px 60px 40px;
+
+        margin: 0 auto;
+        &::after {
+            display: none;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 960px;
+        padding: 69px 120px 87px;
+    }
+}
+
+.video__title {
+    @include font(18px, 26px);
+
+    margin: 0;
+    margin-bottom: 27px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        @include font(30px, 1);
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.video__text {
+    @include font(14px, 24px);
+
+    margin: 0;
+    margin-bottom: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 74px;
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 72px;
+        padding-left: 260px;
+        padding-right: 260px;
+    }
+}
+
+.video__presentation {
+    position: relative;
+
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+.video__presentation img {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+        width: 648px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.video__icon-svg {
+    display: block;
+
+    fill: $primaryControls;
+    cursor: pointer;
+    transition: fill 0.3s linear;
+
+    &:hover,
+    &:focus {
+        fill: darken($primaryControls, 15%);
+    }
+
+    &:active {
+        fill: lighten($primaryControls, 25%);
+    }
+
+    @media (min-width: $tablet-width) {
+        fill: $secondaryControls;
+        &:hover,
+        &:focus {
+            fill: darken($secondaryControls, 25%);
+        }
+
+        &:active {
+            fill: darken($secondaryControls, 50%);
+        }
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.video__userbar {
+    width: 100%;
+    margin-top: -45px;
+
+    box-sizing: border-box;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: $tablet-width) {
+        padding: 0;
+        margin-top: -92px;
+
+
+        width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 800px;
+        margin-left: 80px;
+    }
+}
+
+.video__bar {
+    position: relative;
+    padding: 22px 23px 20px 22px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    @media (min-width: $tablet-width) {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        padding-left: 93px;
+    }
+
+    @media (min-width: $desktop-width) {
+        box-sizing: border-box;
+    }
+}
+
+.video__toggle {
+    position: relative;
+
+    display: block;
+    width: 235px;
+    height: 3px;
+
+    background-color: rgba(255, 255, 255, 0.2);;
+    &::after {
+        @include pseudo();
+
+        top: -3px;
+        left: 36px;
+
+        width: 9px;
+        height: 9px;
+
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 389px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 540px;
+    }
+}
+
+.video__controls {
+    display: flex;
+
+    padding-top: 23px;
+    padding-bottom: 23px;
+
+    background-color: #f2f2f2;
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+        bottom: 13px;
+        left: 0;
+        background-color: transparent;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 100%;
+    }
+}
+
+.video__btn {
+    padding: 0;
+
+    &--replay {
+        margin-left: 25px;
+    }
+    &--sub {
+        margin-left: 133px;
+    }
+
+    &--full {
+        margin-left: 31px;
+    }
+
+    @media (min-width: $tablet-width) {
+        &--replay {
+            margin-left: 35px;
+        }
+        &--sub {
+            margin-left: 473px;
+        }
+
+        &--full {
+            margin-left: 31px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &--sub {
+            margin-left: 624px;
+        }
+    }
+}
+
+

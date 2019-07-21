@@ -1,0 +1,123 @@
+.reason {
+    width: 320px;
+    margin: 0 auto;
+    color: white;
+
+    text-align: center;
+
+    background-color: #81b3d2;
+    
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+
+        width: 768px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1200px;
+    }
+}
+
+.reason__wrapper {
+    padding: 39px 20px 41px;
+
+    @media (min-width: $tablet-width) {
+        width: 162px;
+        padding: 44px 47px;
+        &--right {
+            order: 2;
+        }
+        text-transform: uppercase;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 266px;
+        padding: 51px 67px 58px;
+    }
+}
+
+.reason__title {
+    @include font(18px, 26px);
+
+    margin-bottom: 6px;
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        @include font(21px, 26px);
+
+        margin-bottom: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0 25px;
+
+        margin-bottom: 9px;
+    }
+}
+
+.reason__number {
+    @include font(14px, 26px);
+
+    margin-bottom: 12px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 19px;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.reason__text {
+    @include font(14px, 21px);
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {}
+
+    @media (min-width: $desktop-width) {}
+}
+
+.reason__img {
+    width: 320px;
+    height: 260px;
+
+    background-color: #866252;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+
+    &--city {
+        background-image: url(./../../img/city-mobile.jpg);
+    }
+
+    &--bridge {
+        background-image: url(./../../img/bridge-mobile.jpg);
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 512px;
+        height: 256px;
+
+        &--city {
+            background-image: url(./../../img/city-tablet.jpg);
+        }
+        &--bridge {
+            background-image: url(./../../img/bridge-tablet.jpg);
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 800px;
+        height: 256px;
+        &--city {
+            background-image: url(./../../img/city-desktop.jpg);
+        }
+        &--bridge {
+            background-image: url(./../../img/bridge-desktop.jpg);
+        }
+    }
+}
+

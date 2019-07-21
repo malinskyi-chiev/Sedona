@@ -1,0 +1,52 @@
+.photo-video {
+    position: relative;
+
+    width: 280px;
+    margin: 0 auto;
+    padding: 37px 20px 27px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #fff;
+
+    @media (min-width: $tablet-width) {
+        width: 648px;
+        padding: 73px 60px 69px;
+        text-align: center;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 960px;
+        padding: 110px 120px 71px;
+    }
+}
+
+.photo-video__title {
+    @include font(18px, 26px);
+
+    margin-bottom: 27px;
+
+    @media (min-width: $tablet-width) {
+        @include font(30px, 1);
+
+        width: 428px;
+
+        margin: 0 auto;
+        margin-bottom: 29px;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.photo-video__text {
+    @include font(14px, 24px);
+
+    @media (min-width: $tablet-width) {
+        width: 428px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+

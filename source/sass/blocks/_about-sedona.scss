@@ -1,0 +1,85 @@
+.about-sedona {
+    position: relative;
+
+    width: 280px;
+    padding: 39px 20px 43px;
+    margin: 0 auto;
+
+    background-color: #fff;
+
+    text-align: center;
+    
+    &::after {
+        @include pseudo();
+
+        left: 0;
+        bottom: -1px;
+        width: 320px;
+        height: 26px;
+        background-image: url(./../../img/svg/icon-corner-mobile-blue.svg);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 648px;
+
+        padding: 49px 60px 50px;
+
+        background-image: none;
+        &::after {
+            display: none;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1200px;
+        box-sizing: border-box;
+        padding-bottom: 52px;
+    }
+
+}
+
+
+
+
+
+
+.about-sedona__title {
+    @include font(18px, 26px);
+
+    margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+        @include font(21px, 26px);
+
+        margin-bottom: 29px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0  260px;
+    }
+
+}
+
+.about-sedona__text {
+    @include font(14px, 26px);
+
+    letter-spacing: .12px;
+}
+
+
+
+.about-sedona__title,
+.about-sedona__text  {
+    text-transform: uppercase;
+}
+
+.about-sedona__wrapper {
+    padding: 0 10px;
+
+    @media (min-width: $tablet-width) {
+        padding: 0 50px;
+    }
+}
+

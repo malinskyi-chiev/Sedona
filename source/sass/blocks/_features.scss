@@ -1,0 +1,126 @@
+.features__list {
+    width: 280px;
+    margin: 0 auto;
+    padding: 26px 20px 0;
+
+    text-align: center;
+    list-style: none;
+
+    background-color: #eeeeee;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        width: 768px;
+        padding: 45px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1200px;
+        padding-bottom: 67px;
+    }
+}
+
+.features__item {
+    position: relative;
+
+    &:nth-child(1) {
+        &::after {
+            @include pseudo();
+            bottom: 0;
+            left: 0;
+
+            width: 280px;
+            height: 1px;
+
+            background-color: #d6d6d6;
+        }
+    }
+
+    &:nth-child(2) {
+        &::after {
+            @include pseudo();
+            bottom: 0;
+            left: 0;
+
+            width: 280px;
+            height: 1px;
+
+            background-color: #d6d6d6;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        &:nth-child(1) {
+            &::after {
+                display: none;
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                display: none;
+            }
+        }
+        width: 256px;
+        padding: 0 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 400px;
+    }
+}
+
+.features__item + .features__item {
+    margin-top: 26px;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.features__title {
+    @include font(18px, 26px);
+
+    margin-bottom: 9px;
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        @include font(21px, 26px);
+
+        margin-bottom: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0 72px 10px;
+    }
+}
+
+.features__number {
+    @include font(14px, 21px);
+
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 21px;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.features__text {
+    @include font(14px, 21px);
+
+    padding-bottom: 29px;
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        padding-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+

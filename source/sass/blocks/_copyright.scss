@@ -1,0 +1,42 @@
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copyright__text {
+    @include font(14px, 26px);
+
+    margin-right: 11px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        margin-right: 8px;
+    }
+}
+
+.copyright__link {
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+    top: 0;
+    left: 0;
+    background-image: url("./../../img/svg/icons/footer__logo.svg");
+    background-repeat: no-repeat;
+    background-position: 0 10%;
+    background-size: 27px 34px;
+}
+
+.copyright__icon {
+    transition: fill .2s linear,
+                opacity .2s linear;
+    &:focus,
+    &:hover {
+        fill: darken($primary, 5%);
+    }
+
+    &:active {
+        fill: #766357;
+    }
+}

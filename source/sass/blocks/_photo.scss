@@ -1,0 +1,165 @@
+.photo {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    background-color: #fff;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 648px;
+        padding: 0 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1200px;
+        padding: 0;
+    }
+
+}
+
+.photo__group {
+    margin: 0;
+    padding: 23px 0 16px;
+    background-color: #fff;
+
+    @media (min-width: $tablet-width) {
+        padding: 0;
+        background-color: #f2f2f2;
+
+        &--road {
+            background-color: #eaeaea;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        position: relative;
+    }
+}
+
+.photo__link {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+
+    &::after {
+        @include pseudo();
+        top: -23px;
+        left: -20px;
+
+        width: 320px;
+        height: 1px;
+
+        background-color: #d6d6d6;
+    }
+
+    @media (min-width: $tablet-width) {
+        &::after {
+            display: none;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+    }
+}
+
+.photo__img {
+    display: block;
+
+    @media (min-width: $tablet-width) {
+        width: 324px;
+
+        &--adaptive {
+            width: 648px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 400px;
+
+        &--adaptive {
+            width: 1200px;
+        }
+    }
+}
+
+.photo__figcaption {
+    @include font(14px, 24px, 700);
+
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        padding-left: 20px;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.photo__wrapper-author {
+    @media (min-width: $tablet-width) {
+        position: relative;
+    }
+
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        padding-bottom: 17px;
+        padding-left: 20px;
+    }
+}
+
+.photo__author-name {
+    @include font(14px, 24px);
+
+    display: block;
+    margin-bottom: 7px;
+
+    font-style: normal;
+
+    @media (min-width: $tablet-width) {
+        margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+.photo__likes {
+    padding-left: 37px;
+
+    @include font(14px, 26px, 700);
+
+    background-image: url(./../../img/svg/icon-photo-like.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 23px 21px;
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+        @include pseudo();
+        right: -9px;
+        top: -12px;
+
+        width: 61px;
+        padding-left: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+        background-color: transparent;
+    }
+}
+
+
+.photo__wrapper-author-data {
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+
+        color: #fff;
+    }
+}

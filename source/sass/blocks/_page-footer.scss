@@ -1,0 +1,46 @@
+.page-footer {
+
+    width: 280px;
+    margin: 0 auto;
+    padding: 35px 20px 29px;
+
+    background-color: #ffffff;
+
+    @media (min-width: $tablet-width) {
+        width: 648px;
+        padding: 36px 60px 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 960px;
+        padding: 34px 120px 36px;
+    }
+}
+
+.page-footer__hashtag {
+    margin: 0;
+    margin-bottom: 37px;
+    text-align: center;
+
+    @include font(21px, 26px, 700, black);
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        padding: 0;
+        margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {}
+}
+
+
+
+
+.page-footer__wrapper {
+    @media (min-width: $tablet-width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+

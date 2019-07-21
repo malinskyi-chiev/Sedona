@@ -1,0 +1,52 @@
+* {
+    &::after,
+    &::before {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+
+    @include font(18px, 26px, 400);
+    font-family: $sans-serif;
+
+    background-color: #f7f7f7;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
