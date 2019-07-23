@@ -13,7 +13,8 @@
         @include pseudo();
 
         left: 0;
-        bottom: -1px;
+        bottom: 0;
+        
         width: 320px;
         height: 26px;
         background-image: url(./../../img/svg/icon-corner-mobile-blue.svg);

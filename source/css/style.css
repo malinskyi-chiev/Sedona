@@ -192,11 +192,53 @@ p {
 .main-nav {
   position: relative;
   padding-bottom: 56px; }
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: #81b3d2;
+    box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2; }
+  .main-nav--opened .main-nav__toggle {
+    top: 16px; }
+    .main-nav--opened .main-nav__toggle::before, .main-nav--opened .main-nav__toggle::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -3px;
+      width: 30px;
+      height: 3px;
+      background-color: white; }
+    .main-nav--opened .main-nav__toggle::before {
+      transform: rotate(45deg);
+      box-shadow: none; }
+    .main-nav--opened .main-nav__toggle::after {
+      transform: rotate(-45deg); }
   @media (min-width: 768px) {
     .main-nav {
       display: flex;
       flex-direction: row;
       padding: 0; } }
+
+@media (max-width: 767px) {
+  .main-nav--closed .site-list__item {
+    display: none; } }
+
+.main-nav__toggle {
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+  width: 23px;
+  height: 21px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent; }
+  @media (min-width: 768px) {
+    .main-nav__toggle {
+      display: none; } }
 
 .main-nav__logo {
   position: absolute;
@@ -208,9 +250,6 @@ p {
   @media (min-width: 768px) {
     .main-nav__logo {
       top: 0; } }
-
-.main-nav__toggle {
-  display: none; }
 
 .main-nav__list {
   margin: 0;
@@ -273,7 +312,7 @@ p {
     display: block;
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: 0;
     width: 320px;
     height: 26px;
     background-image: url(./../../img/svg/icon-corner-mobile-blue.svg);
@@ -580,7 +619,7 @@ p {
 .offers {
   width: 280px;
   margin: 0 auto;
-  padding: 26px 20px 49px;
+  padding: 27px 20px 49px;
   text-align: center;
   text-transform: uppercase;
   background-color: #fff; }
@@ -597,7 +636,7 @@ p {
 .offers__title {
   font-size: 21px;
   line-height: 26px;
-  margin-bottom: 18px; }
+  margin-bottom: 20px; }
   @media (min-width: 768px) {
     .offers__title {
       font-size: 30px;
@@ -607,7 +646,7 @@ p {
 .offers__text {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 36px; }
+  margin-bottom: 35px; }
   @media (min-width: 768px) {
     .offers__text {
       padding: 0 166px;

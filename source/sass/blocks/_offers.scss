@@ -1,7 +1,7 @@
 .offers {
     width: 280px;
     margin: 0 auto;
-    padding: 26px 20px 49px;
+    padding: 27px 20px 49px;
 
     text-align: center;
     text-transform: uppercase;
@@ -23,7 +23,7 @@
 .offers__title {
     @include font(21px, 26px);
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
     @media (min-width: $tablet-width) {
         @include font(30px, 1);
@@ -37,7 +37,7 @@
 .offers__text {
     @include font(14px, 24px);
 
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 
     @media (min-width: $tablet-width) {
         padding: 0 166px;

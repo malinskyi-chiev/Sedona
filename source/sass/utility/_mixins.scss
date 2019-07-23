@@ -36,6 +36,7 @@
 @mixin link($link, $visit, $hover, $active) {
     text-decoration: none;
     color: $link;
+    
     &:visited {
       color: $visit;
     }
