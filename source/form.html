@@ -25,7 +25,8 @@
 
 <body>
     <header class="page-header">
-        <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <nav class="main-nav  main-nav--closed">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <a class="main-nav__logo" href="index.html">
                 <picture>
                     <source media="(min-width: 1200px)" srcset="img/svg/icon-logo-desktop.svg">
@@ -33,11 +34,11 @@
                     <img src="img/svg/icon-logo.svg" width="102" height="82" alt="Sedona">
                 </picture>
             </a>
-            <div class="main-nav__wrapper">
+            <div class="main-nav__inner">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item"><a href="index.html">Главная</a></li>
+                    <li class="site-list__item site-list__item--active"><a>Главная</a></li>
                     <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
-                    <li class="site-list__item site-list__item--active"><a>Форма отзыва</a></li>
+                    <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
                     <li class="site-list__item"><a href="#">HTML Academy</a></li>
                 </ul>
             </div>
@@ -48,7 +49,7 @@
     </header>
 
 
-    <main class="page-form">
+    <main class="page-main page-main--form">
         <section class="form">
             <h1 class="form__title">Оставьте свой отзыв</h1>
             <p class="form__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
@@ -147,7 +148,7 @@
 
 
     <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="page-footer__inner">
             <p class="page-footer__hashtag">#visitsedona</p>
             <div class="page-footer__social social">
                 <ul class="social__list">
@@ -188,7 +189,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

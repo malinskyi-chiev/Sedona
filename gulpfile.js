@@ -1,5 +1,5 @@
-var gulp = require("gulp"); // Подключаем gulp.
-var sass = require("gulp-sass"); // Подключаем sass пакет.
+var gulp = require("gulp");
+var sass = require("gulp-sass"); 
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -10,12 +10,11 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var run = require("run-sequence");
 
-
-gulp.task("style", function() { // Создаем таск style.
+gulp.task("style", function() { 
     gulp.src("source/sass/style.scss")
         .pipe(plumber())
-        .pipe(sass()) // Преобразуем sass в css посредством gulp-sass.
-        .pipe(gulp.dest("source/css")) // Выгружаем результата в папку source/css.
+        .pipe(sass())
+        .pipe(gulp.dest("source/css"))
         .pipe(server.stream());
 });
 

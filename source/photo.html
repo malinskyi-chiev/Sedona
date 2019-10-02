@@ -18,14 +18,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/logotype-16.png">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./css/utility/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/utility/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Photo Sedona</title>
 </head>
 
 <body>
     <header class="page-header">
-        <nav class="main-nav  main-nav--closed main-nav--nojs">
+        <nav class="main-nav  main-nav--closed">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <a class="main-nav__logo" href="index.html">
                 <picture>
                     <source media="(min-width: 1200px)" srcset="img/svg/icon-logo-desktop.svg">
@@ -33,10 +34,10 @@
                     <img src="img/svg/icon-logo.svg" width="102" height="82" alt="Sedona">
                 </picture>
             </a>
-            <div class="main-nav__wrapper">
+            <div class="main-nav__inner">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item"><a href="index.html">Главная</a></li>
-                    <li class="site-list__item site-list__item--active"><a>Фото и видео</a></li>
+                    <li class="site-list__item"><a>Главная</a></li>
+                    <li class="site-list__item site-list__item--active"><a href="photo.html">Фото и видео</a></li>
                     <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
                     <li class="site-list__item"><a href="#">HTML Academy</a></li>
                 </ul>
@@ -47,82 +48,85 @@
         </div>
     </header>
 
-    <main class="page-photo">
-        <section class="photo-video">
-            <h2 class="photo-video__title">Фото и видео</h2>
-            <p class="photo-video__text">Не можете решиться на путешествие из-за курса?
-                Фотографии помогут вам забыть о политике и экономике.</p>
-        </section>
+    <main class="page-main page-main--photo">
 
-        <section class="photo">
-            <figure class="photo__group">
-                <a class="photo__link" href="#">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/road-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="./img/road-tablet.jpg">
-                        <img class="photo__img photo__img--adaptive" width="280" height="280" src="./img/road-mobile.jpg" alt="">
-                    </picture>
-                </a>
-                <div class="photo__wrapper-author-data">
-                    <figcaption class="photo__figcaption">Неродные просторы</figcaption>
-                    <div class="photo__wrapper-author">
-                        <cite class="photo__author-name">Автор фото: Борис</cite>
-                        <div class="photo__likes">1350</div>
-                    </div>
-                </div>
-            </figure>
+        <section class="photo">    
+            <div class="photo__video">
+                <h2 class="photo__video-title">Фото и видео</h2>
+                <p class="photo__video-text">Не можете решиться на путешествие из-за курса?
+                    Фотографии помогут вам забыть о политике и экономике.</p>
+            </div>
 
-            <figure class="photo__group">
-                <a class="photo__link" href="#">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/vegetation-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="./img/vegetation-tablet.jpg">
-                        <img class="photo__img" width="280" height="280" src="./img/vegetation-mobile.jpg" alt="">
-                    </picture>
-                </a>
-                <div class="photo__wrapper-author-data">
-                    <figcaption class="photo__figcaption">Местная растительность</figcaption>
-                    <div class="photo__wrapper-author">
-                        <cite class="photo__author-name">Автор фото: Сергей</cite>
-                        <div class="photo__likes">143</div>
+            <div class="photo__cards">
+                <figure class="photo__card">
+                    <a class="photo__card-link" href="#">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/road-desktop.jpg">
+                            <source media="(min-width: 768px)" srcset="./img/road-tablet.jpg">
+                            <img class="photo__card-img photo__card-img--adaptive" width="280" height="280" src="./img/road-mobile.jpg" alt="">
+                        </picture>
+                    </a>
+                    <div class="photo__card-body">
+                        <figcaption class="photo__card-title">Неродные просторы</figcaption>
+                        <div class="photo__card-author">
+                            <cite class="photo__card-name">Автор фото: Борис</cite>
+                            <div class="photo__card-likes">1350</div>
+                        </div>
                     </div>
-                </div>
-            </figure>
+                </figure>
 
-            <figure class="photo__group photo__group--road">
-                <a class="photo__link" href="#">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/forest-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="./img/forest-tablet.jpg">
-                        <img class="photo__img" width="280" height="280" src="./img/forest-mobile.jpg" alt="">
-                    </picture>
-                </a>
-                <div class="photo__wrapper-author-data">
-                    <figcaption class="photo__figcaption">Дорога на север</figcaption>
-                    <div class="photo__wrapper-author">
-                        <cite class="photo__author-name">Автор фото: Петр</cite>
-                        <div class="photo__likes">96</div>
+                <figure class="photo__card">
+                    <a class="photo__card-link" href="#">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/vegetation-desktop.jpg">
+                            <source media="(min-width: 768px)" srcset="./img/vegetation-tablet.jpg">
+                            <img class="photo__card-img" width="280" height="280" src="./img/vegetation-mobile.jpg" alt="">
+                        </picture>
+                    </a>
+                    <div class="photo__card-body">
+                        <figcaption class="photo__card-title">Местная растительность</figcaption>
+                        <div class="photo__card-author">
+                            <cite class="photo__card-name">Автор фото: Сергей</cite>
+                            <div class="photo__card-likes">143</div>
+                        </div>
                     </div>
-                </div>
-            </figure>
+                </figure>
 
-            <figure class="photo__group">
-                <a class="photo__link" href="#">
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/bridge-devil-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="./img/bridge-devil-tablet.jpg">
-                        <img class="photo__img" width="280" height="280" src="./img/bridge-devil-mobile.jpg" alt="">
-                    </picture>
-                </a>
-                <div class="photo__wrapper-author-data">
-                    <figcaption class="photo__figcaption">Мост дьявола</figcaption>
-                    <div class="photo__wrapper-author">
-                        <cite class="photo__author-name">Автор фото: Антон</cite>
-                        <div class="photo__likes">254</div>
+                <figure class="photo__card photo__card--road">
+                    <a class="photo__card-link" href="#">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/forest-desktop.jpg">
+                            <source media="(min-width: 768px)" srcset="./img/forest-tablet.jpg">
+                            <img class="photo__card-img" width="280" height="280" src="./img/forest-mobile.jpg" alt="">
+                        </picture>
+                    </a>
+                    <div class="photo__card-body">
+                        <figcaption class="photo__card-title">Дорога на север</figcaption>
+                        <div class="photo__card-author">
+                            <cite class="photo__card-name">Автор фото: Петр</cite>
+                            <div class="photo__card-likes">96</div>
+                        </div>
                     </div>
-                </div>
-            </figure>
-        </section>
+                </figure>
+
+                <figure class="photo__card">
+                    <a class="photo__card-link" href="#">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="./img/bridge-devil-desktop.jpg">
+                            <source media="(min-width: 768px)" srcset="./img/bridge-devil-tablet.jpg">
+                            <img class="photo__card-img" width="280" height="280" src="./img/bridge-devil-mobile.jpg" alt="">
+                        </picture>
+                    </a>
+                    <div class="photo__card-body">
+                        <figcaption class="photo__card-title">Мост дьявола</figcaption>
+                        <div class="photo__card-author">
+                            <cite class="photo__card-name">Автор фото: Антон</cite>
+                            <div class="photo__card-likes">254</div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>    
 
         <section class="video">
             <h3 class="video__title">Все еще сомневаетесь?</h3>
@@ -165,7 +169,7 @@
     </main>
 
     <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="page-footer__inner">
             <p class="page-footer__hashtag">#visitsedona</p>
             <div class="page-footer__social social">
                 <ul class="social__list">
@@ -206,7 +210,9 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.min.js"></script>
+
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
